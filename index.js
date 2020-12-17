@@ -1,8 +1,10 @@
 const Discord = require('discord.js');
+const config = require('./config.json');
 require('dotenv').config();
+
 const bot = new Discord.Client();
 
-const token = process.env.TOKEN;
+const token = config.token;
 
 bot.on('ready', () => {
     console.log('This bot is online!');
